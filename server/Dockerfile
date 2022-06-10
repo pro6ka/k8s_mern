@@ -4,4 +4,5 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 EXPOSE 8080
-CMD ["npm", "start"]
+RUN pwd
+CMD ["/usr/src/app/server/node_modules/.bin/nodemon", "start"]
