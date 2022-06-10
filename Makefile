@@ -6,6 +6,7 @@ up:
 	kubectl apply -f server-deployment.yaml
 	kubectl apply -f client-deployment.yaml
 	kubectl get pods
+	minikube get service app-client --url
 
 down:
 	$(info $(minikube docker-env -u))
