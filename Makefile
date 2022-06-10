@@ -14,3 +14,5 @@ down:
 	minikube stop
 	minikube delete
 
+deploy-%:
+	cd ./$* && npx nodeshift --kube
